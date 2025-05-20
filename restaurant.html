@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Epicurean Delight - Premium Dining Experience</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary-color: #ff6b6b;
+        --secondary-color: #4ecdc4;
+        --dark-color: #2d3436;
+      }
+
+      .hero-section {
+        height: 100vh;
+        background: linear-gradient(
+            45deg,
+            rgba(45, 52, 54, 0.9),
+            rgba(45, 52, 54, 0.7)
+          ),
+          url("https://source.unsplash.com/random/1920x1080/?gourmet")
+            center/cover fixed;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .floating-button {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+      }
+
+      .menu-card {
+        transition: all 0.3s ease;
+        border: none;
+        overflow: hidden;
+      }
+
+      .menu-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .price-tag {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: var(--primary-color);
+        color: white;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-weight: 600;
+      }
+
+      .feature-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--secondary-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: white;
+        margin: 0 auto 20px;
+      }
+
+      .testimonial-card {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+
+      .social-hover {
+        transition: all 0.3s ease;
+      }
+
+      .social-hover:hover {
+        transform: scale(1.2);
+        color: var(--primary-color) !important;
+      }
+    </style>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#navbar">
+    <!-- Navigation -->
+    <nav
+      id="navbar"
+      class="navbar navbar-expand-lg navbar-light bg-light fixed-top py-3"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold fs-3" href="#">
+          <i class="fas fa-utensils me-2 text-primary"></i>Epicurean Delight
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-white">
+      <div class="container text-center position-relative">
+        <div class="floating-button">
+          <h1 class="display-3 fw-bold mb-4">
+            Experience Culinary<br />Perfection
+          </h1>
+          <p class="lead mb-5">Where Tradition Meets Innovation</p>
+          <a
+            href="#reservation"
+            class="btn btn-lg btn-primary px-5 py-3 rounded-pill"
+            >Book Your Table</a
+          >
+        </div>
+        <div class="scroll-indicator">
+          <i
+            class="fas fa-chevron-down position-absolute bottom-0 start-50 translate-middle-x fs-4"
+          ></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section id="features" class="py-5 bg-light">
+      <div class="container">
+        <div class="row g-5 text-center">
+          <div class="col-md-4">
+            <div class="feature-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h4>Organic Ingredients</h4>
+            <p class="text-muted">Locally sourced, fresh produce daily</p>
+          </div>
+          <!-- Add two more feature columns -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Signature Dishes</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="menu-card card h-100">
+              <div class="position-relative">
+                <img
+                  src="https://source.unsplash.com/random/600x400/?steak"
+                  class="card-img-top"
+                  alt="Dish"
+                />
+                <div class="price-tag">$38</div>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Prime Ribeye Steak</h5>
+                <p class="card-text text-muted">
+                  Aged 28 days, served with truffle mashed potatoes
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <button class="btn btn-sm btn-outline-primary">
+                    Add to Cart
+                  </button>
+                  <div class="rating">
+                    <i class="fas fa-star text-warning"></i>
+                    4.9
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add more menu items -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Reservation Form -->
+    <section id="reservation" class="py-5 bg-dark text-white">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-md-6">
+            <h2>Make a Reservation</h2>
+            <form class="row g-3">
+              <div class="col-md-6">
+                <input type="date" class="form-control" required />
+              </div>
+              <div class="col-md-6">
+                <input type="time" class="form-control" required />
+              </div>
+              <div class="col-12">
+                <button class="btn btn-primary w-100">
+                  Check Availability
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=..."
+                style="border: 0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Carousel -->
+    <section id="testimonials" class="py-5">
+      <div class="container">
+        <div
+          id="testimonialCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="testimonial-card text-center">
+                <img
+                  src="https://source.unsplash.com/random/100x100/?person"
+                  class="rounded-circle mb-3"
+                  alt="Client"
+                />
+                <h5>Exceptional Dining Experience</h5>
+                <p class="text-muted">
+                  "The best meal we've had this year! Every detail was perfect."
+                </p>
+                <div class="rating">
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Add more testimonials -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-md-4">
+            <h4 class="mb-4">Epicurean Delight</h4>
+            <p>
+              Committed to delivering exceptional dining experiences since 2005
+            </p>
+            <div class="social-links">
+              <a href="#" class="text-white social-hover me-3"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="text-white social-hover me-3"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" class="text-white social-hover"
+                ><i class="fab fa-tiktok"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <h4 class="mb-4">Quick Links</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#menu" class="text-white text-decoration-none"
+                  >Our Menu</a
+                >
+              </li>
+              <li>
+                <a href="#about" class="text-white text-decoration-none"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#contact" class="text-white text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h4 class="mb-4">Newsletter</h4>
+            <form>
+              <div class="input-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Your email
+                address"
+                  required
+                />
+                <button class="btn btn-primary" type="submit">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
